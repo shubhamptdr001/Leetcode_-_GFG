@@ -7,32 +7,26 @@ public:
     }
     
     void push(int value) {
+        st1.push(value);
+        if(!st.empty() && st.top()<value)value = st.top();
         st.push(value);
+        
     }
     
     void pop() {
+        if(st.empty())return;
         st.pop();
+        st1.pop();
     }
     
     int top() {
-        return st.top();
+        if(st1.empty()) return NULL;
+        return st1.top();
     }
     
     int getMin() {
-        int mini = INT_MAX;
-        while(!st.empty()){
-            int i = st.top();
-            st.pop();
-            mini = min(mini,i);
-            st1.push(i);
-        }
-        while(!st1.empty()){
-            int i = st1.top();
-            st1.pop();
-            st.push(i);
-        }
-        
-        return mini;
+        if(st.empty())return NULL;
+        return st.top();
     }
 };
 
