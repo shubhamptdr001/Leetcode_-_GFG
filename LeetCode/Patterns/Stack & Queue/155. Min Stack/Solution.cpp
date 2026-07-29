@@ -31,7 +31,7 @@ public:
             st1.pop();
             st.push(i);
         }
-        if(mini == INT_MAX) return -1;
+        
         return mini;
     }
 };
