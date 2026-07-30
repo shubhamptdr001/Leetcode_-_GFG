@@ -1,6 +1,6 @@
 # 📝 513. Find Bottom Left Tree Value (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/find-bottom-left-tree-value/?envType=problem-list-v2&envId=tree)
+🔗 [Problem Link](https://leetcode.com/problems/find-bottom-left-tree-value/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-C++-blue)
 
