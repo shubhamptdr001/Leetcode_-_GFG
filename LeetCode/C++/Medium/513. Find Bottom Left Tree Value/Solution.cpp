@@ -19,7 +19,7 @@ public:
 
         while(!q.empty()){
             int n = q.size();
-
+            vector<
             while(n--){
                 TreeNode* node = q.front().first;
                 int row = q.front().second.first;
