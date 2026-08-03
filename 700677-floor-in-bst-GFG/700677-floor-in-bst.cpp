@@ -23,6 +23,13 @@ class Solution {
       
    }
     int findMaxFork(Node* root, int k) {
+       // COACH ANALYSIS:
+       // 1. Logic Issue: Your traversal conditions are slightly flawed. 
+       //    If root->data <= k, you might still find a larger value (a better floor) in the right subtree.
+       //    If root->data > k, you MUST go left to find a value <= k.
+       // 2. Complexity: Current Time O(N) in worst case, Space O(H) for recursion.
+       // 3. Optimal: Since it's a BST, you can achieve O(H) time by eliminating half the tree at each step.
+       
        int mini = -1;
        
        helper(root,k,mini);
