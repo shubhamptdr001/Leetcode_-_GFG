@@ -1,17 +1,15 @@
 class Solution:
     def fibonacciNumbers(self, n: int) -> list[int]:
         # code here
-        ans = []
+        if n == 1:
+            return [0]
+        if n ==2:
+            return [0,1]
+            
+        ans = self.fibonacciNumbers(n-1)
         
-        x = 0
-        y = 1
-        if(n-1>=0): ans.append(0)
-        if(n-1>=1): ans.append(1)
-        for i in range(3,n+1):
-            k = x+y
-            ans.append(k)
-            x = y
-            y = k
+        next_fib = ans[-1] + ans[-2]
+        ans.append(next_fib)
             
         return ans
 
